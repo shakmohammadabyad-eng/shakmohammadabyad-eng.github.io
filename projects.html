@@ -3,44 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Shak Mohammad Abyad</title>
+    <title>Shak Mohammad Abyad - Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { margin: 0; font-family: Arial, sans-serif; background: #1a1a2e; color: #fff; }
-        .nav { display: flex; justify-content: space-between; padding: 20px 50px; background: rgba(0, 0, 0, 0.7); }
-        .nav .name { font-size: 24px; color: #b19cd9; }
-        .nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
-        .nav ul li { margin: 0 20px; }
-        .nav ul li a { color: #d1c4e9; text-decoration: none; font-size: 18px; }
-        .nav ul li a:hover { color: #fff; }
-        .section { padding: 50px; text-align: center; }
-        .section h2 { color: #b19cd9; font-size: 36px; }
-        .section ul { list-style: none; padding: 0; }
-        .section ul li { margin: 10px 0; font-size: 18px; color: #d1c4e9; }
-        .section a.btn { padding: 10px 20px; background: linear-gradient(45deg, #6b48ff, #a770ef); color: #fff; text-decoration: none; border-radius: 25px; }
-        .section a.btn:hover { background: linear-gradient(45deg, #a770ef, #6b48ff); }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1A1A1A;
+            color: #E5E5E5;
+        }
+        .custom-green {
+            background-color: #1B4D3E;
+        }
+        .custom-green-hover:hover {
+            background-color: #2A6B52;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
-    <div class="nav">
-        <div class="name">Shak Mohammad Abyad</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>My Projects</h2>
-        <ul>
-            <li>Airlines Management System</li>
-            <li>Real Estate Based Website</li>
-            <li>DavAi – The Medicine Chatbot</li>
-            <li>Car Price Prediction</li>
-            <li>Ma3Bani – LLM Based Application</li>
-        </ul>
-        <p>Check out my GitHub for more details: <a href="https://github.com/shakmohammadabyad-eng" class="btn">GitHub</a></p>
-    </div>
+    <!-- Navigation Bar -->
+    <nav class="custom-green text-white fixed w-full top-0 z-10 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold">Shak Mohammad Abyad</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="custom-green-hover px-3 py-2 rounded-md">Home</a>
+                    <a href="education.html" class="custom-green-hover px-3 py-2 rounded-md">Education</a>
+                    <a href="skills.html" class="custom-green-hover px-3 py-2 rounded-md">Skills</a>
+                    <a href="projects.html" class="custom-green-hover px-3 py-2 rounded-md">Projects</a>
+                    <a href="contact.html" class="custom-green-hover px-3 py-2 rounded-md">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="py-16 bg-[#1A1A1A] mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#2A2A2A] p-6 rounded-lg shadow-md hover-scale">
+                    <h3 class="text-xl font-semibold text-white mb-2">Airlines Management System</h3>
+                    <p class="text-gray-300">A system to manage airline operations, streamlining booking and scheduling processes.</p>
+                </div>
+                <div class="bg-[#2A2A2A] p-6 rounded-lg shadow-md hover-scale">
+                    <h3 class="text-xl font-semibold text-white mb-2">Real Estate Based Website</h3>
+                    <p class="text-gray-300">A web platform for real estate listings, featuring user-friendly search and filter options.</p>
+                </div>
+                <div class="bg-[#2A2A2A] p-6 rounded-lg shadow-md hover-scale">
+                    <h3 class="text-xl font-semibold text-white mb-2">DavAi – The Medicine Chatbot</h3>
+                    <p class="text-gray-300">An AI-powered chatbot providing medical information and assistance.</p>
+                </div>
+                <div class="bg-[#2A2A2A] p-6 rounded-lg shadow-md hover-scale">
+                    <h3 class="text-xl font-semibold text-white mb-2">Car Price Prediction</h3>
+                    <p class="text-gray-300">A machine learning model to predict car prices based on various features.</p>
+                </div>
+                <div class="bg-[#2A2A2A] p-6 rounded-lg shadow-md hover-scale">
+                    <h3 class="text-xl font-semibold text-white mb-2">Ma3Bani – LLM Based Application</h3>
+                    <p class="text-gray-300">An application leveraging large language models for enhanced user interaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2A2A2A] text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Shak Mohammad Abyad. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
