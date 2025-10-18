@@ -3,11 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abyad-Portfolio</title>
+    <title>Shak Mohammad Abyad Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1a1a2e url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .nav .name {
+            font-size: 24px;
+            color: #b19cd9;
+        }
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav ul li {
+            margin: 0 20px;
+        }
+        .nav ul li a {
+            color: #d1c4e9;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .nav ul li a:hover {
+            color: #fff;
+        }
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+        .section h2 {
+            color: #b19cd9;
+            font-size: 36px;
+        }
+        .section p {
+            font-size: 18px;
+            color: #d1c4e9;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            background: linear-gradient(45deg, #6b48ff, #a770ef);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+        .btn:hover {
+            background: linear-gradient(45deg, #a770ef, #6b48ff);
+        }
+        .skills .skill-box {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            width: 200px;
+        }
+        .skills .skill-box h3 {
+            color: #b19cd9;
+        }
+        .skills .skill-box .progress {
+            background: #333;
+            border-radius: 5px;
+            height: 10px;
+            overflow: hidden;
+        }
+        .skills .skill-box .progress-bar {
+            height: 100%;
+            background: linear-gradient(45deg, #6b48ff, #a770ef);
+            width: 0;
+            animation: grow 2s forwards;
+        }
+        @keyframes grow {
+            from { width: 0; }
+            to { width: 85%; } /* Adjust as needed */
+        }
+        .projects ul {
+            list-style: none;
+            padding: 0;
+        }
+        .projects ul li {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #d1c4e9;
+        }
+        .contact .info {
+            margin: 20px 0;
+        }
+        .contact .info div {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .contact form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: #333;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .contact form button {
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #6b48ff, #a770ef);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .contact form button:hover {
+            background: linear-gradient(45deg, #a770ef, #6b48ff);
+        }
+    </style>
 </head>
 <body>
-    <p>Hello World</p>
-    <h1>I am Abyad </h1>
-    <h2>And this is my portfolio</h2>
+    <div class="nav">
+        <div class="name">Shak Mohammad Abyad</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="section" id="home">
+        <h2>Shak Mohammad Abyad</h2>
+        <p>Computer Science Student at North South University. Passionate about AI, ML, and Data Science.</p>
+        <a href="#about" class="btn">About Me</a>
+        <a href="#projects" class="btn">My Projects</a>
+    </div>
+    <div class="section" id="about">
+        <h2>About Me</h2>
+        <p>A dedicated Computer Science and Engineering student with strong analytical and programming skills, seeking a position in Machine Learning, Artificial Intelligence, or Data Science. Committed to applying innovative approaches and modern technologies to develop intelligent, data-driven solutions that contribute to organizational success and technological advancement.</p>
+        <p>Education: B.Sc. in Computer Science and Engineering, North South University (2021–2025)</p>
+    </div>
+    <div class="section skills" id="skills">
+        <h2>My Skills</h2>
+        <p>Technologies I work with</p>
+        <div class="skill-box">
+            <h3>Programming Languages</h3>
+            <div>Python <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></div>
+            <div>C/C++ <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></div>
+            <div>JavaScript <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
+        </div>
+        <div class="skill-box">
+            <h3>Frameworks & Libraries</h3>
+            <div>TensorFlow/PyTorch <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
+            <div>Scikit-learn <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></div>
+            <div>Pandas/NumPy <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></div>
+        </div>
+        <div class="skill-box">
+            <h3>Tools & Platforms</h3>
+            <div>VS Code <div class="progress"><div class="progress-bar" style="width: 95%;"></div></div></div>
+            <div>Jupyter Notebook <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></div>
+            <div>Anaconda <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
+        </div>
+    </div>
+    <div class="section projects" id="projects">
+        <h2>My Projects</h2>
+        <ul>
+            <li>Airlines Management System</li>
+            <li>Real Estate Based Website</li>
+            <li>DavAi – The Medicine Chatbot</li>
+            <li>Car Price Prediction</li>
+            <li>Ma3Bani – LLM Based Application</li>
+        </ul>
+        <p>Check out my GitHub for more details: <a href="https://github.com/shakmohammadabyad-eng" class="btn">GitHub</a></p>
+    </div>
+    <div class="section contact" id="contact">
+        <h2>Get In Touch</h2>
+        <p>Let's collaborate on AI and ML projects!</p>
+        <div class="info">
+            <div>📞 Phone: 019152358246</div>
+            <div>✉️ Email: shakmohammadabyad@gmail.com</div>
+            <div>🔗 LinkedIn: <a href="https://www.linkedin.com/in/shak-mohammad-abyad-864223383/">Profile</a></div>
+            <div>💻 GitHub: <a href="https://github.com/shakmohammadabyad-eng">Repository</a></div>
+            <div>📍 Location: North South University, Bangladesh</div>
+        </div>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <input type="text" placeholder="Subject">
+            <textarea placeholder="Your Message" rows="5"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
 </body>
 </html>
