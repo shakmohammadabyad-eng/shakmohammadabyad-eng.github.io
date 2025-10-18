@@ -3,121 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shak Mohammad Abyad Portfolio</title>
+    <title>Shak Mohammad Abyad - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.9)), url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+            background-color: #1A1A1A;
+            color: #E5E5E5;
         }
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 50px;
-            background: rgba(0, 0, 0, 0.7);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+        .custom-green {
+            background-color: #1B4D3E;
         }
-        .nav .name {
-            font-size: 24px;
-            color: #b19cd9;
-            font-weight: bold;
+        .custom-green-hover:hover {
+            background-color: #2A6B52;
         }
-        .nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
+        .hover-scale {
+            transition: transform 0.3s ease;
         }
-        .nav ul li {
-            margin: 0 20px;
-        }
-        .nav ul li a {
-            color: #d1c4e9;
-            text-decoration: none;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-        .nav ul li a:hover {
-            color: #fff;
-        }
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
-        .hero h1 {
-            font-size: 60px;
-            color: #b19cd9;
-            margin: 0;
-            animation: fadeIn 2s ease-in;
-        }
-        .hero p {
-            font-size: 22px;
-            color: #d1c4e9;
-            max-width: 600px;
-            margin: 20px 0;
-        }
-        .hero .btn-group {
-            display: flex;
-            gap: 20px;
-        }
-        .btn {
-            padding: 12px 25px;
-            background: linear-gradient(45deg, #6b48ff, #a770ef);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 25px;
-            font-size: 16px;
-            transition: transform 0.3s, background 0.3s;
-        }
-        .btn:hover {
-            background: linear-gradient(45deg, #a770ef, #6b48ff);
+        .hover-scale:hover {
             transform: scale(1.05);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .background-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: -1;
         }
     </style>
 </head>
 <body>
-    <div class="nav">
-        <div class="name">Shak Mohammad Abyad</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-    <div class="background-overlay"></div>
-    <div class="hero">
-        <h1>Welcome to My World</h1>
-        <p>I'm Shak Mohammad Abyad, a Computer Science student at North South University, passionate about AI, Machine Learning, and innovative tech solutions. Explore my journey and skills!</p>
-        <div class="btn-group">
-            <a href="about.html" class="btn">Learn More</a>
-            <a href="projects.html" class="btn">View Projects</a>
+    <!-- Navigation Bar -->
+    <nav class="custom-green text-white fixed w-full top-0 z-10 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold">Shak Mohammad Abyad</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="custom-green-hover px-3 py-2 rounded-md">Home</a>
+                    <a href="education.html" class="custom-green-hover px-3 py-2 rounded-md">Education</a>
+                    <a href="skills.html" class="custom-green-hover px-3 py-2 rounded-md">Skills</a>
+                    <a href="projects.html" class="custom-green-hover px-3 py-2 rounded-md">Projects</a>
+                    <a href="contact.html" class="custom-green-hover px-3 py-2 rounded-md">Contact</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-r from-[#1A1A1A] to-[#1B4D3E] text-white">
+        <div class="text-center max-w-3xl mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Welcome to My Portfolio</h2>
+            <p class="text-lg md:text-xl mb-6">I'm Shak Mohammad Abyad, a Computer Science and Engineering student at North South University, passionate about Machine Learning, Artificial Intelligence, and innovative tech solutions.</p>
+            <a href="projects.html" class="bg-white text-[#1B4D3E] px-6 py-3 rounded-full font-semibold custom-green-hover hover-scale">View My Projects</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2A2A2A] text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Shak Mohammad Abyad. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
