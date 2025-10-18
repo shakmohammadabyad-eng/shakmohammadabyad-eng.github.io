@@ -3,52 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Shak Mohammad Abyad</title>
+    <title>Shak Mohammad Abyad - Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { margin: 0; font-family: Arial, sans-serif; background: #1a1a2e; color: #fff; }
-        .nav { display: flex; justify-content: space-between; padding: 20px 50px; background: rgba(0, 0, 0, 0.7); }
-        .nav .name { font-size: 24px; color: #b19cd9; }
-        .nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
-        .nav ul li { margin: 0 20px; }
-        .nav ul li a { color: #d1c4e9; text-decoration: none; font-size: 18px; }
-        .nav ul li a:hover { color: #fff; }
-        .section { padding: 50px; text-align: center; }
-        .section h2 { color: #b19cd9; font-size: 36px; }
-        .section p { font-size: 18px; color: #d1c4e9; }
-        .info div { margin: 10px 0; font-size: 18px; }
-        .section form { max-width: 400px; margin: 20px auto; text-align: left; }
-        .section form input, .section form textarea { width: 100%; padding: 10px; margin: 10px 0; background: #333; border: none; color: #fff; border-radius: 5px; }
-        .section form button { padding: 10px 20px; background: linear-gradient(45deg, #6b48ff, #a770ef); color: #fff; border: none; border-radius: 25px; cursor: pointer; }
-        .section form button:hover { background: linear-gradient(45deg, #a770ef, #6b48ff); }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1A1A1A;
+            color: #E5E5E5;
+        }
+        .custom-green {
+            background-color: #1B4D3E;
+        }
+        .custom-green-hover:hover {
+            background-color: #2A6B52;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
-    <div class="nav">
-        <div class="name">Shak Mohammad Abyad</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Get In Touch</h2>
-        <p>Let's collaborate on AI and ML projects!</p>
-        <div class="info">
-            <div>📞 Phone: 019152358246</div>
-            <div>✉️ Email: shakmohammadabyad@gmail.com</div>
-            <div>🔗 LinkedIn: <a href="https://www.linkedin.com/in/shak-mohammad-abyad-864223383/">Profile</a></div>
-            <div>💻 GitHub: <a href="https://github.com/shakmohammadabyad-eng">Repository</a></div>
+    <!-- Navigation Bar -->
+    <nav class="custom-green text-white fixed w-full top-0 z-10 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold">Shak Mohammad Abyad</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="custom-green-hover px-3 py-2 rounded-md">Home</a>
+                    <a href="education.html" class="custom-green-hover px-3 py-2 rounded-md">Education</a>
+                    <a href="skills.html" class="custom-green-hover px-3 py-2 rounded-md">Skills</a>
+                    <a href="projects.html" class="custom-green-hover px-3 py-2 rounded-md">Projects</a>
+                    <a href="contact.html" class="custom-green-hover px-3 py-2 rounded-md">Contact</a>
+                </div>
+            </div>
         </div>
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <input type="text" placeholder="Subject">
-            <textarea placeholder="Your Message" rows="5"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="py-16 custom-green text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Get in Touch</h2>
+            <p class="text-center text-lg mb-6">Interested in collaborating or learning more? Reach out to me!</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="mailto:shakmohammadabyad@gmail.com" class="bg-white text-[#1B4D3E] px-6 py-3 rounded-full font-semibold custom-green-hover hover-scale">Email: shakmohammadabyad@gmail.com</a>
+                <a href="tel:+019152358246" class="bg-white text-[#1B4D3E] px-6 py-3 rounded-full font-semibold custom-green-hover hover-scale">Phone: 019152358246</a>
+                <a href="https://www.linkedin.com/in/shak-mohammad-abyad-864223383/" target="_blank" class="bg-white text-[#1B4D3E] px-6 py-3 rounded-full font-semibold custom-green-hover hover-scale">LinkedIn</a>
+                <a href="https://github.com/shakmohammadabyad-eng" target="_blank" class="bg-white text-[#1B4D3E] px-6 py-3 rounded-full font-semibold custom-green-hover hover-scale">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2A2A2A] text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Shak Mohammad Abyad. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
