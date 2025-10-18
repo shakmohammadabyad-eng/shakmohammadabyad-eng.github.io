@@ -7,20 +7,26 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #1a1a2e url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.9)), url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
+            overflow-x: hidden;
         }
         .nav {
             display: flex;
             justify-content: space-between;
             padding: 20px 50px;
             background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         .nav .name {
             font-size: 24px;
             color: #b19cd9;
+            font-weight: bold;
         }
         .nav ul {
             list-style: none;
@@ -35,100 +41,61 @@
             color: #d1c4e9;
             text-decoration: none;
             font-size: 18px;
+            transition: color 0.3s;
         }
         .nav ul li a:hover {
             color: #fff;
         }
-        .section {
-            padding: 50px;
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            padding: 0 20px;
         }
-        .section h2 {
+        .hero h1 {
+            font-size: 60px;
             color: #b19cd9;
-            font-size: 36px;
+            margin: 0;
+            animation: fadeIn 2s ease-in;
         }
-        .section p {
-            font-size: 18px;
+        .hero p {
+            font-size: 22px;
             color: #d1c4e9;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+        .hero .btn-group {
+            display: flex;
+            gap: 20px;
         }
         .btn {
-            padding: 10px 20px;
-            margin: 10px;
+            padding: 12px 25px;
             background: linear-gradient(45deg, #6b48ff, #a770ef);
             color: #fff;
             text-decoration: none;
             border-radius: 25px;
+            font-size: 16px;
+            transition: transform 0.3s, background 0.3s;
         }
         .btn:hover {
             background: linear-gradient(45deg, #a770ef, #6b48ff);
+            transform: scale(1.05);
         }
-        .skills .skill-box {
-            display: inline-block;
-            margin: 20px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            width: 200px;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-        .skills .skill-box h3 {
-            color: #b19cd9;
-        }
-        .skills .skill-box .progress {
-            background: #333;
-            border-radius: 5px;
-            height: 10px;
-            overflow: hidden;
-        }
-        .skills .skill-box .progress-bar {
-            height: 100%;
-            background: linear-gradient(45deg, #6b48ff, #a770ef);
-            width: 0;
-            animation: grow 2s forwards;
-        }
-        @keyframes grow {
-            from { width: 0; }
-            to { width: 85%; } /* Adjust as needed */
-        }
-        .projects ul {
-            list-style: none;
-            padding: 0;
-        }
-        .projects ul li {
-            margin: 10px 0;
-            font-size: 18px;
-            color: #d1c4e9;
-        }
-        .contact .info {
-            margin: 20px 0;
-        }
-        .contact .info div {
-            margin: 10px 0;
-            font-size: 18px;
-        }
-        .contact form {
-            max-width: 400px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        .contact form input, .contact form textarea {
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            background: #333;
-            border: none;
-            color: #fff;
-            border-radius: 5px;
-        }
-        .contact form button {
-            padding: 10px 20px;
-            background: linear-gradient(45deg, #6b48ff, #a770ef);
-            color: #fff;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-        }
-        .contact form button:hover {
-            background: linear-gradient(45deg, #a770ef, #6b48ff);
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
         }
     </style>
 </head>
@@ -136,74 +103,21 @@
     <div class="nav">
         <div class="name">Shak Mohammad Abyad</div>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
-    <div class="section" id="home">
-        <h2>Shak Mohammad Abyad</h2>
-        <p>Computer Science Student at North South University. Passionate about AI, ML, and Data Science.</p>
-        <a href="#about" class="btn">About Me</a>
-        <a href="#projects" class="btn">My Projects</a>
-    </div>
-    <div class="section" id="about">
-        <h2>About Me</h2>
-        <p>A dedicated Computer Science and Engineering student with strong analytical and programming skills, seeking a position in Machine Learning, Artificial Intelligence, or Data Science. Committed to applying innovative approaches and modern technologies to develop intelligent, data-driven solutions that contribute to organizational success and technological advancement.</p>
-        <p>Education: B.Sc. in Computer Science and Engineering, North South University (2021–2025)</p>
-    </div>
-    <div class="section skills" id="skills">
-        <h2>My Skills</h2>
-        <p>Technologies I work with</p>
-        <div class="skill-box">
-            <h3>Programming Languages</h3>
-            <div>Python <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></div>
-            <div>C/C++ <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></div>
-            <div>JavaScript <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
+    <div class="background-overlay"></div>
+    <div class="hero">
+        <h1>Welcome to My World</h1>
+        <p>I'm Shak Mohammad Abyad, a Computer Science student at North South University, passionate about AI, Machine Learning, and innovative tech solutions. Explore my journey and skills!</p>
+        <div class="btn-group">
+            <a href="about.html" class="btn">Learn More</a>
+            <a href="projects.html" class="btn">View Projects</a>
         </div>
-        <div class="skill-box">
-            <h3>Frameworks & Libraries</h3>
-            <div>TensorFlow/PyTorch <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
-            <div>Scikit-learn <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></div>
-            <div>Pandas/NumPy <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></div>
-        </div>
-        <div class="skill-box">
-            <h3>Tools & Platforms</h3>
-            <div>VS Code <div class="progress"><div class="progress-bar" style="width: 95%;"></div></div></div>
-            <div>Jupyter Notebook <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></div>
-            <div>Anaconda <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
-        </div>
-    </div>
-    <div class="section projects" id="projects">
-        <h2>My Projects</h2>
-        <ul>
-            <li>Airlines Management System</li>
-            <li>Real Estate Based Website</li>
-            <li>DavAi – The Medicine Chatbot</li>
-            <li>Car Price Prediction</li>
-            <li>Ma3Bani – LLM Based Application</li>
-        </ul>
-        <p>Check out my GitHub for more details: <a href="https://github.com/shakmohammadabyad-eng" class="btn">GitHub</a></p>
-    </div>
-    <div class="section contact" id="contact">
-        <h2>Get In Touch</h2>
-        <p>Let's collaborate on AI and ML projects!</p>
-        <div class="info">
-            <div>📞 Phone: 019152358246</div>
-            <div>✉️ Email: shakmohammadabyad@gmail.com</div>
-            <div>🔗 LinkedIn: <a href="https://www.linkedin.com/in/shak-mohammad-abyad-864223383/">Profile</a></div>
-            <div>💻 GitHub: <a href="https://github.com/shakmohammadabyad-eng">Repository</a></div>
-            <div>📍 Location: North South University, Bangladesh</div>
-        </div>
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <input type="text" placeholder="Subject">
-            <textarea placeholder="Your Message" rows="5"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
     </div>
 </body>
 </html>
