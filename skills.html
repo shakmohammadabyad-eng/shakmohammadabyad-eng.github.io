@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Shak Mohammad Abyad</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; background: #1a1a2e; color: #fff; }
+        .nav { display: flex; justify-content: space-between; padding: 20px 50px; background: rgba(0, 0, 0, 0.7); }
+        .nav .name { font-size: 24px; color: #b19cd9; }
+        .nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+        .nav ul li { margin: 0 20px; }
+        .nav ul li a { color: #d1c4e9; text-decoration: none; font-size: 18px; }
+        .nav ul li a:hover { color: #fff; }
+        .section { padding: 50px; text-align: center; }
+        .section h2 { color: #b19cd9; font-size: 36px; }
+        .section p { font-size: 18px; color: #d1c4e9; }
+        .skill-box { display: inline-block; margin: 20px; padding: 20px; background: rgba(0, 0, 0, 0.7); border-radius: 10px; width: 200px; }
+        .skill-box h3 { color: #b19cd9; }
+        .skill-box .progress { background: #333; border-radius: 5px; height: 10px; overflow: hidden; }
+        .skill-box .progress-bar { height: 100%; background: linear-gradient(45deg, #6b48ff, #a770ef); width: 0; animation: grow 2s forwards; }
+        @keyframes grow { from { width: 0; } to { width: 85%; } }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="name">Shak Mohammad Abyad</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>My Skills</h2>
+        <p>Technologies I work with</p>
+        <div class="skill-box">
+            <h3>Programming Languages</h3>
+            <div>Python <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></div>
+            <div>C/C++ <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></div>
+            <div>JavaScript <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
+        </div>
+        <div class="skill-box">
+            <h3>Frameworks & Libraries</h3>
+            <div>TensorFlow/PyTorch <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
+            <div>Scikit-learn <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></div>
+            <div>Pandas/NumPy <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></div>
+        </div>
+        <div class="skill-box">
+            <h3>Tools & Platforms</h3>
+            <div>VS Code <div class="progress"><div class="progress-bar" style="width: 95%;"></div></div></div>
+            <div>Jupyter Notebook <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></div>
+            <div>Anaconda <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
+        </div>
+    </div>
+</body>
+</html>
